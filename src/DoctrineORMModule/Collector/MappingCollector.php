@@ -4,10 +4,10 @@ namespace DoctrineORMModule\Collector;
 
 use Serializable;
 
-use ZendDeveloperTools\Collector\CollectorInterface;
-use ZendDeveloperTools\Collector\AutoHideInterface;
+use Laminas\DeveloperTools\Collector\CollectorInterface;
+use Laminas\DeveloperTools\Collector\AutoHideInterface;
 
-use Zend\Mvc\MvcEvent;
+use Laminas\Mvc\MvcEvent;
 
 use Doctrine\Common\Persistence\Mapping\ClassMetadataFactory;
 

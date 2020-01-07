@@ -6,10 +6,10 @@ use ArrayObject;
 use Doctrine\Common\Persistence\ObjectManager;
 use Doctrine\ORM\Mapping\ClassMetadata;
 use DoctrineORMModule\Form\Element\EntitySelect;
-use Zend\EventManager\AbstractListenerAggregate;
-use Zend\EventManager\EventInterface;
-use Zend\EventManager\EventManagerInterface;
-use Zend\Form\Element as ZendFormElement;
+use Laminas\EventManager\AbstractListenerAggregate;
+use Laminas\EventManager\EventInterface;
+use Laminas\EventManager\EventManagerInterface;
+use Laminas\Form\Element as ZendFormElement;
 
 /**
  * @author Kyle Spraggs <theman@spiffyjr.me>
@@ -330,7 +330,7 @@ class ElementAnnotationsListener extends AbstractListenerAggregate
             case 'string':
                 $elementSpec = $event->getParam('elementSpec');
                 if (isset($elementSpec['spec']['type']) &&
-                    in_array($elementSpec['spec']['type'], ['File', 'Zend\Form\Element\File'])
+                    in_array($elementSpec['spec']['type'], ['File', 'Laminas\Form\Element\File'])
                 ) {
                     return;
                 }
